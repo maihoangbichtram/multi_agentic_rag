@@ -1,0 +1,8 @@
+langchain
+langchain-core
+langchain-community
+langchain-openai
+langchain-google-genai
+langgraph
+rank_bm25
+langchain_cohere
