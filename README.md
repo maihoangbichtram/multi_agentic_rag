@@ -19,7 +19,7 @@ for generated queries to retrieve related info.
 
 ### Installation
 
-1. Install Python 3.11 or later. [Guide](https://www.tutorialsteacher.com/python/install-python).
+1. Install Python 3.12 or later. [Guide](https://www.tutorialsteacher.com/python/install-python).
 2. Clone the project and navigate to the directory:
 
     ```bash
