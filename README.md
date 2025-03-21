@@ -6,7 +6,7 @@
 for generated queries to retrieve related info.
 
 ## Demo
-[![Website](https://img.shields.io/badge/Demo%20Website-platform.sh-teal?style=for-the-badge&logo=world&logoColor=white&color=0891b2)](https://app-930736962858.europe-west3.run.app/docs)
+[![Website](https://img.shields.io/badge/Demo%20Website-google%20clould%20platform-teal?style=for-the-badge&logo=world&logoColor=white&color=0891b2)](https://app-930736962858.europe-west3.run.app/docs)
 ![img.png](./media/Screenshot%202025-03-05%20at%2016.38.14.png)
 ![img.png](./media/Screenshot%202025-03-05%20at%2016.38.26.png)
 ![img.png](./media/Screenshot%202025-03-05%20at%2016.38.57.png)
@@ -35,38 +35,41 @@ for generated queries to retrieve related info.
     ```
 
 4. Create and Activate virtual environment
-4.1 In terminal:
-Create a virtual environment
+
+   4.1 In terminal:
+   Create a virtual environment
 
    ```bash
    python3 -m venv .venv
    ```
-Activate the virtual environment
+   Activate the virtual environment
 
    ```bash
    . .venv/bin/activate
    ```
-4.2 Poetry
+   4.2 Poetry
 
    ```bash
    poetry shell
    ```
 5. Install dependencies and start the server:
-5.1 In terminal:
+
+    5.1 In terminal:
     ```bash
     pip install -r requirements.txt
     ```
-5.2 Poetry
+    5.2 Poetry
    ```bash
    poetry install
    ```
 6. Start the application
-6.1 In terminal:
+
+   6.1 In terminal:
 
    ```bash
    python app/main.py
    ```
-6.2 Poetry
+   6.2 Poetry
    ```bash
    poetry run uvicorn app.main:app --reload --timeout-keep-alive 720
    ```
