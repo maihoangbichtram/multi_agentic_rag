@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from typing import Annotated
 
 from langchain_core.documents import Document
-from utils.utils import reduce_docs
+from app.utils.utils import reduce_docs
 
 @dataclass(kw_only=True)
 class QueryState:

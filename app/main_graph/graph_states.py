@@ -7,7 +7,7 @@ from langgraph.graph import add_messages
 
 from pydantic import BaseModel, Field
 
-from utils.utils import reduce_docs
+from app.utils.utils import reduce_docs
 
 @dataclass(kw_only=True)
 class InputState:

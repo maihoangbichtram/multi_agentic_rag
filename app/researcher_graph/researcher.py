@@ -1,7 +1,7 @@
 import asyncio
 
 from langchain_core.documents import Document
-from retrievers.tavily.tavily_search import TavilySearch
+from app.retrievers.tavily.tavily_search import TavilySearch
 
 class ResearchConductor:
     """Manages and coordinates the research process."""

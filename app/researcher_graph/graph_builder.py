@@ -1,8 +1,8 @@
-from researcher_graph.graph_states import ResearcherState, QueryState
-from researcher_graph.researcher import ResearchConductor
+from app.researcher_graph.graph_states import ResearcherState, QueryState
+from app.researcher_graph.researcher import ResearchConductor
 from typing import cast
-from utils.prompt import GENERATE_QUERIES_SYSTEM_PROMPT
-from utils.utils import config
+from app.utils.prompt import GENERATE_QUERIES_SYSTEM_PROMPT
+from app.utils.utils import config
 
 from dotenv import load_dotenv
 import logging

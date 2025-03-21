@@ -1,7 +1,7 @@
-from main_graph.graph_states import AgentState, InputState, HalluciantionGrade
-from researcher_graph.graph_builder import research_graph
-from utils.prompt import RESEARCH_PLAN_SYSTEM_PROMPT, RESPONSE_SYSTEM_PROMPT, CHECK_HALLUCINATIONS
-from utils.utils import config
+from app.main_graph.graph_states import AgentState, InputState, HalluciantionGrade
+from app.researcher_graph.graph_builder import research_graph
+from app.utils.prompt import RESEARCH_PLAN_SYSTEM_PROMPT, RESPONSE_SYSTEM_PROMPT, CHECK_HALLUCINATIONS
+from app.utils.utils import config
 
 from langchain_core.documents import Document
 from langchain_core.runnables import RunnableConfig
