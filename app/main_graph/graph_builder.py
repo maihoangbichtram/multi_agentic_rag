@@ -31,6 +31,7 @@ logging.getLogger("httpx").propagate = False
 GEMINI_2_0_FLASH = config['llm']['gemini_2_0_flash']
 GEMINI_2_0_PRO = config['llm']['gemini_2_0_pro']
 TEMPERATURE = config['llm']['temperature']
+RESPONSE_WORD_MIN = config['response']['word_min']
 
 async def create_research_plan(state: AgentState, *, config: RunnableConfig) -> dict[str, list[str] | str]:
     class Plan(BaseModel):
@@ -86,7 +87,7 @@ async def respond(state: AgentState, *, config: RunnableConfig):
     logger.info("---REPONSE GENERATION STEP---")
     model = ChatGoogleGenerativeAI(model=GEMINI_2_0_PRO, temperature=TEMPERATURE, streaming=True)
     context = _format_docs(state.documents)
-    prompt = RESPONSE_SYSTEM_PROMPT.format(context=context)
+    prompt = RESPONSE_SYSTEM_PROMPT.format(context=context, word_min=RESPONSE_WORD_MIN)
     messages = [
         {"role": "system", "content": prompt},
     ] + state.messages

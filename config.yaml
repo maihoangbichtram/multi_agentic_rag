@@ -14,3 +14,5 @@ retriever:
   ensemble_weights_: [0.3, 0.3, 0.4]
   ensemble_weights: [0.3]
   cohere_rerank_model: rerank-english-v3.0
+response:
+  word_min: 200

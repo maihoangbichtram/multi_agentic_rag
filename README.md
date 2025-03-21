@@ -7,6 +7,8 @@ for generated queries to retrieve related info.
 
 ## Demo
 [![Website](https://img.shields.io/badge/Demo%20Website-google%20clould%20platform-teal?style=for-the-badge&logo=world&logoColor=white&color=0891b2)](https://app-930736962858.europe-west3.run.app/docs)
+- To improve performance and avoid reaching limit of free tier of Google Generative AI, I limited the length of the response/report to be min 200 words.
+
 ![img.png](./media/Screenshot%202025-03-05%20at%2016.38.14.png)
 ![img.png](./media/Screenshot%202025-03-05%20at%2016.38.26.png)
 ![img.png](./media/Screenshot%202025-03-05%20at%2016.38.57.png)
@@ -19,6 +21,8 @@ for generated queries to retrieve related info.
 4. Human input (e.g research plan, sources to fetch documents for queries)
 
 ### Installation
+
+Customize LLMs, retrievers and report length in `config.yaml`
 
 1. Install Python 3.12 or later. [Guide](https://www.tutorialsteacher.com/python/install-python).
 2. Clone the project and navigate to the directory:
@@ -136,6 +140,9 @@ docker buildx build --file Dockerfile \
   --tag <gcd_region>-docker.pkg.dev/<gcd_project_id>/<gcd_repository_name>/<image_name>:latest .
 ```
 ##### Deploy
+Added necessary API keys for the app to run probably.
+If you configure OpenAI for `llm`, add env var `OPENAI_API_KEY`.
+
 ```bash
 gcloud run deploy app \                             
 --image <gcd_region>-docker.pkg.dev/<gcd_project_id>/<gcd_repository_name>/<image_name>:latest \
